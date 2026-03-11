@@ -39,8 +39,6 @@ export function SetProductsToRedux() {
     orderProducts.forEach((item) => {
       const product = data.find((p: any) => p.id === item.productId);
 
-      console.log(product); // для дебага
-
       // Если продукта нет или он неактивен — удаляем
       if (!product || !product.isActive) {
         dispatch(
